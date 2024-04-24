@@ -1,3 +1,4 @@
 *.json
 .prettierrc
 node_modules
+*.sql
