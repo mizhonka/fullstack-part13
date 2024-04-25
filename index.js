@@ -5,6 +5,7 @@ const { PORT } = require('./util/config')
 const { connectToDatabase } = require('./util/db')
 
 const blogsRouter = require('./controllers/blogs')
+const userRouter = require('./controllers/users')
 
 app.use(express.json())
 
@@ -15,6 +16,7 @@ const errorHandler = (error, _req, res, next) => {
 }
 
 app.use('/api/blogs', blogsRouter)
+app.use('/api/users', userRouter)
 app.use(errorHandler)
 
 const start = async () => {
