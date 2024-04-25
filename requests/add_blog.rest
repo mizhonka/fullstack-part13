@@ -3,6 +3,6 @@ Content-Type: application/json
 
 {
     "author": "Ada Lovelace",
-    "title": "Ok blog",
+    "title": "First Program",
     "url": "mypage.net"
 }

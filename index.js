@@ -7,6 +7,7 @@ const { connectToDatabase } = require('./util/db')
 const blogsRouter = require('./controllers/blogs')
 const userRouter = require('./controllers/users')
 const loginRouter = require('./controllers/login')
+const authorRouter = require('./controllers/authors')
 
 app.use(express.json())
 
@@ -19,6 +20,7 @@ const errorHandler = (error, _req, res, next) => {
 app.use('/api/blogs', blogsRouter)
 app.use('/api/users', userRouter)
 app.use('/api/login', loginRouter)
+app.use('/api/authors', authorRouter)
 app.use(errorHandler)
 
 const start = async () => {
