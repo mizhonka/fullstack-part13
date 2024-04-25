@@ -3,6 +3,5 @@ Content-Type: application/json
 
 {
     "author": "Jamie Oliveoil",
-    "title": "Authentic Tiramisu",
     "url": "recipes.com"
 }
