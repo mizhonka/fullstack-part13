@@ -11,10 +11,10 @@ app.use(express.json())
 app.use('/api/blogs', blogsRouter)
 
 const start = async () => {
-  await connectToDatabase()
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
-  })
+    await connectToDatabase()
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`)
+    })
 }
 
 start()
