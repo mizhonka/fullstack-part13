@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "lint": "npx prettier . --write"
+    "lint": "npx prettier . --write",
+    "dev": "nodemon cli.js"
   },
   "author": "Miranda Honkanen",
   "license": "ISC",
