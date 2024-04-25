@@ -2,7 +2,7 @@ POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
-    "author": "Jamie Oliveoil",
-    "title": "Authentic tiramisu",
-    "url": "recipes.com"
+    "author": "Ada Lovelace",
+    "title": "Ok blog",
+    "url": "mypage.net"
 }
