@@ -25,7 +25,9 @@ const blogFinder = async (req, _res, next) => {
 }
 
 router.get('/', async (_req, res) => {
-    const blogs = await Blog.findAll()
+    const blogs = await Blog.findAll({
+        include: { model: User, attributes: { exclude: ['userId'] } },
+    })
     res.json(blogs)
 })
 
