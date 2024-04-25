@@ -2,6 +2,7 @@ POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
-    "author": "Me Myself",
-    "url": "madeup.com"
+    "author": "Jamie Oliveoil",
+    "title": "Authentic Tiramisu",
+    "url": "recipes.com"
 }

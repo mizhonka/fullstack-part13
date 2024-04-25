@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "npx prettier . --write",
-    "dev": "nodemon cli.js"
+    "dev": "nodemon index.js"
   },
   "author": "Miranda Honkanen",
   "license": "ISC",
