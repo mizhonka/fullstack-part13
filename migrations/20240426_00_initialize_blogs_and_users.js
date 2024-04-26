@@ -23,6 +23,25 @@ module.exports = {
                 type: DataTypes.INTEGER,
                 defaultValue: 0,
             },
+            year: {
+                type: DataTypes.INTEGER,
+                validate: {
+                    isInt: true,
+                    isNew(value) {
+                        if (parseInt(value) < 1991) {
+                            throw new Error('Year must be 1991 or later')
+                        }
+                    },
+                    isPresent(value) {
+                        const currentYear = new Date().getFullYear()
+                        if (parseInt(value) > currentYear) {
+                            throw new Error(
+                                'Year cannot be greater than the current year',
+                            )
+                        }
+                    },
+                },
+            },
         })
         await queryInterface.createTable('users', {
             id: {
