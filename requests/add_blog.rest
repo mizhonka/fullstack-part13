@@ -2,8 +2,8 @@ POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
-    "author": "Ada Lovelace",
-    "title": "First Program",
-    "url": "myblog.net",
-    "year": 2024
+    "author": "Jamie Oliveoil",
+    "title": "Authentic Tiramisu",
+    "url": "recipes.com",
+    "year": 2001
 }
