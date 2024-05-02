@@ -1,9 +1,10 @@
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pemhvbmthQGhlbHNpbmtpLmZpIiwiaWQiOjEsImlhdCI6MTcxNDY1NjYwMH0.GfYkpqSrZ9ELRIfSSEG-zRkzZ57zJkkDc14yoJZ8Rao
 
 {
-    "author": "Jamie Oliveoil",
-    "title": "Authentic Tiramisu",
-    "url": "recipes.com",
-    "year": 2001
+    "author": "Ada Lovelace",
+    "title": "First Program",
+    "url": "myblog.net",
+    "year": 2024
 }
