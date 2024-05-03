@@ -1,8 +1,7 @@
-const router = require('express').Router()
-const jwt = require('jsonwebtoken')
+const { v1 } = require('uuid')
 
-const { SECRET } = require('../util/config')
-const User = require('../models/User')
+const router = require('express').Router()
+const { User, Session } = require('../models')
 
 router.post('/', async (req, res) => {
     const body = req.body
@@ -14,12 +13,13 @@ router.post('/', async (req, res) => {
         return res.status(401).json({ error: 'Incorrect username or password' })
     }
 
-    const userForToken = {
-        username: user.username,
-        id: user.id,
+    if (user.disabled) {
+        return res.status(401).json({ error: 'This user is disabled' })
     }
 
-    const token = jwt.sign(userForToken, SECRET)
+    const token = v1()
+
+    await Session.create({ userId: user.id, token: token })
 
     res.status(200).send({ token, username: user.username, name: user.name })
 })

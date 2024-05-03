@@ -19,7 +19,7 @@ router.post('/', async (req, res, next) => {
 router.put('/:id', tokenExtractor, async (req, res, next) => {
     try {
         const blogId = req.params.id
-        const user = await User.findByPk(req.decodedToken.id)
+        const user = await User.findByPk(req.decodedToken.userId)
         const entry = await Entry.findOne({
             where: {
                 blogId: blogId,
